@@ -1,0 +1,8 @@
+pytesseract
+pillow
+psycopg2
+pdf2image
+supabase
+supabase-py
+python-dotenv
+flask

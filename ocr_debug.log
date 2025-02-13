@@ -1,0 +1,1440 @@
+2025-02-13 15:01:14,812 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:01:14,812 - INFO - Processing Image file
+2025-02-13 15:01:14,818 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:01:14,818 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:01:14,818 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:01:14,818 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:01:14,819 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:01:14,819 - ERROR - Error preprocessing image: cannot access local variable 'gray' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 39, in preprocess_image
+    processed = gray
+                ^^^^
+UnboundLocalError: cannot access local variable 'gray' where it is not associated with a value
+2025-02-13 15:01:14,821 - ERROR - Error processing file: Unsupported image object
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 142, in extract_patient_data
+    extracted_text = extract_text(image)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 53, in extract_text
+    text = pytesseract.image_to_string(preprocessed_image, config=custom_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+           ^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 341, in run_and_get_output
+    with save(image) as (temp_name, input_filename):
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 214, in save
+    image, extension = prepare(image)
+                       ^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 191, in prepare
+    raise TypeError('Unsupported image object')
+TypeError: Unsupported image object
+2025-02-13 15:02:54,887 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:02:54,887 - INFO - Processing Image file
+2025-02-13 15:02:54,894 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:02:54,894 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:02:54,894 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:02:54,894 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:02:54,894 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:02:54,899 - ERROR - Error preprocessing image: conversion from RGB to S not supported
+Traceback (most recent call last):
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 1146, in convert
+    im = self.im.convert(mode, dither)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: conversion from RGBA to S not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 24, in preprocess_image
+    gray = image.convert("S")
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 1154, in convert
+    im = im.convert(mode, dither)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: conversion from RGB to S not supported
+2025-02-13 15:02:54,900 - ERROR - Preprocessing failed
+2025-02-13 15:02:54,900 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:03:04,285 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:03:04,285 - INFO - Processing Image file
+2025-02-13 15:03:04,291 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:03:04,291 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:03:04,292 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:03:04,292 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:03:04,292 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:03:04,312 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_tjijf8kj_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_tjijf8kj', '--oem', '1', '--psm', '11', 'txt']
+2025-02-13 15:03:04,579 - DEBUG - Extracted text:
+Date.
+
+MAA Initials :
+
+INJECTION : YES NO
+
+Exercise Therapy : YES NO
+
+Patient Name ;_VV se se PBA pos:_4 // &§
+
+[st
+
+Rate on a scale from 0-5 {5 being the highest) how dificult Rts to do the following tasks:
+
+Bending of Stooping: 012 34%
+
+Putting on shoes: 0£23 45
+
+Sleeping: 0123345
+
+Standing for an hour:
+
+13345
+
+Going up or down a flight of stairs: 0123.45,
+
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 01,2345
+
+Patient Changes since last treatment:
+
+Net drodd
+
+Patient changes since the start of treatment:
+
+He
+
+Describe anryfunchighal changes within the last three days (good or bad):
+
+Bed
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+
+Pain: Jee Numbness: ¢ Testing: __& burning: 2 nymess 4
+
+!
+
+“10
+
+let
+
+MA:
+
+Blood Pressare:.
+
+Ril
+
+Weigte _§
+
+Beigte 2
+
+2025-02-13 15:03:04,579 - DEBUG - OCR Extracted Text:
+Date.
+
+MAA Initials :
+
+INJECTION : YES NO
+
+Exercise Therapy : YES NO
+
+Patient Name ;_VV se se PBA pos:_4 // &§
+
+[st
+
+Rate on a scale from 0-5 {5 being the highest) how dificult Rts to do the following tasks:
+
+Bending of Stooping: 012 34%
+
+Putting on shoes: 0£23 45
+
+Sleeping: 0123345
+
+Standing for an hour:
+
+13345
+
+Going up or down a flight of stairs: 0123.45,
+
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 01,2345
+
+Patient Changes since last treatment:
+
+Net drodd
+
+Patient changes since the start of treatment:
+
+He
+
+Describe anryfunchighal changes within the last three days (good or bad):
+
+Bed
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+
+Pain: Jee Numbness: ¢ Testing: __& burning: 2 nymess 4
+
+!
+
+“10
+
+let
+
+MA:
+
+Blood Pressare:.
+
+Ril
+
+Weigte _§
+
+Beigte 2
+
+2025-02-13 15:03:04,581 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:03:04,582 - ERROR - Preprocessing failed
+2025-02-13 15:03:16,242 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:03:16,242 - INFO - Processing Image file
+2025-02-13 15:03:16,250 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:03:16,250 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:03:16,250 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:03:16,250 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:03:16,250 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:03:16,254 - ERROR - Error preprocessing image: conversion from RGB to W not supported
+Traceback (most recent call last):
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 1146, in convert
+    im = self.im.convert(mode, dither)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: conversion from RGBA to W not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 24, in preprocess_image
+    gray = image.convert("W")
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 1154, in convert
+    im = im.convert(mode, dither)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: conversion from RGB to W not supported
+2025-02-13 15:03:16,255 - ERROR - Preprocessing failed
+2025-02-13 15:03:16,256 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:04:21,230 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:04:21,230 - INFO - Processing Image file
+2025-02-13 15:04:21,236 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:04:21,236 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:04:21,237 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:04:21,237 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:04:21,237 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:04:21,247 - ERROR - Error preprocessing image: image has wrong mode
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 27, in preprocess_image
+    blurred = gray.filter(ImageFilter.GaussianBlur(radius=0.15))  # Increase blur radius
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 1380, in filter
+    return self._new(filter.filter(self.im))
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\ImageFilter.py", line 191, in filter
+    return image.gaussian_blur(xy)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: image has wrong mode
+2025-02-13 15:04:21,248 - ERROR - Preprocessing failed
+2025-02-13 15:04:21,248 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:07:44,979 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:07:44,979 - INFO - Processing Image file
+2025-02-13 15:07:44,985 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:07:44,985 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:07:44,985 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:07:44,985 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:07:44,985 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:07:45,007 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_zhn1v8lm_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_zhn1v8lm', '-l', 'eng', '--oem', '1', '--psm', '11', 'txt']
+2025-02-13 15:07:45,280 - DEBUG - Extracted text:
+Date.
+
+MAA Initials :
+
+INJECTION : YES NO
+
+Exercise Therapy : YES NO
+
+Patient Name ;_VV se se PBA pos:_4 // &§
+
+[st
+
+Rate on a scale from 0-5 {5 being the highest) how dificult Rts to do the following tasks:
+
+Bending of Stooping: 012 34%
+
+Putting on shoes: 0£23 45
+
+Sleeping: 0123345
+
+Standing for an hour:
+
+13345
+
+Going up or down a flight of stairs: 0123.45,
+
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 01,2345
+
+Patient Changes since last treatment:
+
+Net drodd
+
+Patient changes since the start of treatment:
+
+He
+
+Describe anryfunchighal changes within the last three days (good or bad):
+
+Bed
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+
+Pain: Jee Numbness: ¢ Testing: __& burning: 2 nymess 4
+
+!
+
+“10
+
+let
+
+MA:
+
+Blood Pressare:.
+
+Ril
+
+Weigte _§
+
+Beigte 2
+
+2025-02-13 15:07:45,280 - DEBUG - OCR Extracted Text:
+Date.
+
+MAA Initials :
+
+INJECTION : YES NO
+
+Exercise Therapy : YES NO
+
+Patient Name ;_VV se se PBA pos:_4 // &§
+
+[st
+
+Rate on a scale from 0-5 {5 being the highest) how dificult Rts to do the following tasks:
+
+Bending of Stooping: 012 34%
+
+Putting on shoes: 0£23 45
+
+Sleeping: 0123345
+
+Standing for an hour:
+
+13345
+
+Going up or down a flight of stairs: 0123.45,
+
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 01,2345
+
+Patient Changes since last treatment:
+
+Net drodd
+
+Patient changes since the start of treatment:
+
+He
+
+Describe anryfunchighal changes within the last three days (good or bad):
+
+Bed
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+
+Pain: Jee Numbness: ¢ Testing: __& burning: 2 nymess 4
+
+!
+
+“10
+
+let
+
+MA:
+
+Blood Pressare:.
+
+Ril
+
+Weigte _§
+
+Beigte 2
+
+2025-02-13 15:07:45,282 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:07:45,284 - ERROR - Preprocessing failed
+2025-02-13 15:07:57,715 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:07:57,715 - INFO - Processing Image file
+2025-02-13 15:07:57,721 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:07:57,721 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:07:57,721 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:07:57,721 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:07:57,721 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:07:57,741 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_kbruqm1l_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_kbruqm1l', '-l', 'eng', 'txt']
+2025-02-13 15:07:57,996 - DEBUG - Extracted text:
+Date: MA Initie’s :
+INJECTION : YES NO Exercise Therapy : YES NO
+
+Patient ame: Vae-s 5 EBA pos:_4 1 / os fer
+Rate on a scale from 0-5 {5 being the highest) haw difficult itis to do the following tasks:
+Bending of Stooping: 012 34%
+
+Putting on shoes: 02345
+
+Sleeping: 0123345
+
+Standing for an hour: 0133 45,
+
+Going up or down a flight of stairs: 042 3.45
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 04,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Xe end
+Desertbe any funclighal changes within the lest three days (good or bed}:
+Bod
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest):
+
+” . ‘
+Pain:_Qee Numbness: Tnging:_6 uring: _2 Tightness_&
+"To leted by MA: ’
+Bhood Pressure: Rid Weide _&:
+
+
+2025-02-13 15:07:57,996 - DEBUG - OCR Extracted Text:
+Date: MA Initie’s :
+INJECTION : YES NO Exercise Therapy : YES NO
+
+Patient ame: Vae-s 5 EBA pos:_4 1 / os fer
+Rate on a scale from 0-5 {5 being the highest) haw difficult itis to do the following tasks:
+Bending of Stooping: 012 34%
+
+Putting on shoes: 02345
+
+Sleeping: 0123345
+
+Standing for an hour: 0133 45,
+
+Going up or down a flight of stairs: 042 3.45
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 04,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Xe end
+Desertbe any funclighal changes within the lest three days (good or bed}:
+Bod
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest):
+
+” . ‘
+Pain:_Qee Numbness: Tnging:_6 uring: _2 Tightness_&
+"To leted by MA: ’
+Bhood Pressure: Rid Weide _&:
+
+
+2025-02-13 15:07:57,998 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:07:57,999 - ERROR - Preprocessing failed
+2025-02-13 15:08:25,303 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:08:25,303 - INFO - Processing Image file
+2025-02-13 15:08:25,310 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:08:25,310 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:08:25,310 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:08:25,310 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:08:25,310 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:08:25,332 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_8x1lk8t__input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_8x1lk8t_', '-l', 'eng', 'txt']
+2025-02-13 15:08:25,587 - DEBUG - Extracted text:
+Date: MA Initie’s :
+INJECTION : YES NO Exercise Therapy : YES NO
+
+Patient ame: Vae-s 5 EBA pos:_4 1 / os fer
+Rate on a scale from 0-5 {5 being the highest) haw difficult itis to do the following tasks:
+Bending of Stooping: 012 34%
+
+Putting on shoes: 02345
+
+Sleeping: 0123345
+
+Standing for an hour: 0133 45,
+
+Going up or down a flight of stairs: 042 3.45
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 04,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Xe end
+Desertbe any funclighal changes within the lest three days (good or bed}:
+Bod
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest):
+
+” . ‘
+Pain:_Qee Numbness: Tnging:_6 uring: _2 Tightness_&
+"To leted by MA: ’
+Bhood Pressure: Rid Weide _&:
+
+
+2025-02-13 15:08:25,587 - DEBUG - OCR Extracted Text:
+Date: MA Initie’s :
+INJECTION : YES NO Exercise Therapy : YES NO
+
+Patient ame: Vae-s 5 EBA pos:_4 1 / os fer
+Rate on a scale from 0-5 {5 being the highest) haw difficult itis to do the following tasks:
+Bending of Stooping: 012 34%
+
+Putting on shoes: 02345
+
+Sleeping: 0123345
+
+Standing for an hour: 0133 45,
+
+Going up or down a flight of stairs: 042 3.45
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 04,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Xe end
+Desertbe any funclighal changes within the lest three days (good or bed}:
+Bod
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest):
+
+” . ‘
+Pain:_Qee Numbness: Tnging:_6 uring: _2 Tightness_&
+"To leted by MA: ’
+Bhood Pressure: Rid Weide _&:
+
+
+2025-02-13 15:08:25,589 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:08:25,590 - ERROR - Preprocessing failed
+2025-02-13 15:08:26,644 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:08:26,644 - INFO - Processing Image file
+2025-02-13 15:08:26,651 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:08:26,651 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:08:26,651 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:08:26,651 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:08:26,651 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:08:26,671 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_ya6dnt06_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_ya6dnt06', '-l', 'eng', 'txt']
+2025-02-13 15:08:26,925 - DEBUG - Extracted text:
+Date: MA Initie’s :
+INJECTION : YES NO Exercise Therapy : YES NO
+
+Patient ame: Vae-s 5 EBA pos:_4 1 / os fer
+Rate on a scale from 0-5 {5 being the highest) haw difficult itis to do the following tasks:
+Bending of Stooping: 012 34%
+
+Putting on shoes: 02345
+
+Sleeping: 0123345
+
+Standing for an hour: 0133 45,
+
+Going up or down a flight of stairs: 042 3.45
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 04,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Xe end
+Desertbe any funclighal changes within the lest three days (good or bed}:
+Bod
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest):
+
+” . ‘
+Pain:_Qee Numbness: Tnging:_6 uring: _2 Tightness_&
+"To leted by MA: ’
+Bhood Pressure: Rid Weide _&:
+
+
+2025-02-13 15:08:26,925 - DEBUG - OCR Extracted Text:
+Date: MA Initie’s :
+INJECTION : YES NO Exercise Therapy : YES NO
+
+Patient ame: Vae-s 5 EBA pos:_4 1 / os fer
+Rate on a scale from 0-5 {5 being the highest) haw difficult itis to do the following tasks:
+Bending of Stooping: 012 34%
+
+Putting on shoes: 02345
+
+Sleeping: 0123345
+
+Standing for an hour: 0133 45,
+
+Going up or down a flight of stairs: 042 3.45
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 04,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Xe end
+Desertbe any funclighal changes within the lest three days (good or bed}:
+Bod
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest):
+
+” . ‘
+Pain:_Qee Numbness: Tnging:_6 uring: _2 Tightness_&
+"To leted by MA: ’
+Bhood Pressure: Rid Weide _&:
+
+
+2025-02-13 15:08:26,927 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:08:26,928 - ERROR - Preprocessing failed
+2025-02-13 15:08:38,507 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:08:38,507 - INFO - Processing Image file
+2025-02-13 15:08:38,513 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:08:38,513 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:08:38,513 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:08:38,514 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:08:38,514 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:08:38,534 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_h76_jydn_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_h76_jydn', '--oem', '1', '--psm', '11', 'txt']
+2025-02-13 15:08:38,794 - DEBUG - Extracted text:
+Date.
+
+MAA Initials :
+
+INJECTION : YES NO
+
+Exercise Therapy : YES NO
+
+Patient Name ;_VV se se PBA pos:_4 // &§
+
+[st
+
+Rate on a scale from 0-5 {5 being the highest) how dificult Rts to do the following tasks:
+
+Bending of Stooping: 012 34%
+
+Putting on shoes: 0£23 45
+
+Sleeping: 0123345
+
+Standing for an hour:
+
+13345
+
+Going up or down a flight of stairs: 0123.45,
+
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 01,2345
+
+Patient Changes since last treatment:
+
+Net drodd
+
+Patient changes since the start of treatment:
+
+He
+
+Describe anryfunchighal changes within the last three days (good or bad):
+
+Bed
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+
+Pain: Jee Numbness: ¢ Testing: __& burning: 2 nymess 4
+
+!
+
+“10
+
+let
+
+MA:
+
+Blood Pressare:.
+
+Ril
+
+Weigte _§
+
+Beigte 2
+
+2025-02-13 15:08:38,795 - DEBUG - OCR Extracted Text:
+Date.
+
+MAA Initials :
+
+INJECTION : YES NO
+
+Exercise Therapy : YES NO
+
+Patient Name ;_VV se se PBA pos:_4 // &§
+
+[st
+
+Rate on a scale from 0-5 {5 being the highest) how dificult Rts to do the following tasks:
+
+Bending of Stooping: 012 34%
+
+Putting on shoes: 0£23 45
+
+Sleeping: 0123345
+
+Standing for an hour:
+
+13345
+
+Going up or down a flight of stairs: 0123.45,
+
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 01,2345
+
+Patient Changes since last treatment:
+
+Net drodd
+
+Patient changes since the start of treatment:
+
+He
+
+Describe anryfunchighal changes within the last three days (good or bad):
+
+Bed
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+
+Pain: Jee Numbness: ¢ Testing: __& burning: 2 nymess 4
+
+!
+
+“10
+
+let
+
+MA:
+
+Blood Pressare:.
+
+Ril
+
+Weigte _§
+
+Beigte 2
+
+2025-02-13 15:08:38,796 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:08:38,797 - ERROR - Preprocessing failed
+2025-02-13 15:08:57,219 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:08:57,219 - INFO - Processing Image file
+2025-02-13 15:08:57,226 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:08:57,227 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:08:57,227 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:08:57,227 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:08:57,227 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:08:57,247 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_4lpzee13_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_4lpzee13', '--oem', '1', '--psm', '20', 'txt']
+2025-02-13 15:08:57,266 - ERROR - Error extracting text: (1, '')
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 47, in extract_text
+    extracted_text = pytesseract.image_to_string(processed_image, config=custom_config)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+           ^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 352, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 284, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, '')
+2025-02-13 15:08:57,267 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:09:03,071 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:03,071 - INFO - Processing Image file
+2025-02-13 15:09:03,078 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:03,078 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:03,078 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:03,078 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:03,078 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:03,098 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_jbc16u0g_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_jbc16u0g', '--oem', '1', '--psm', '15', 'txt']
+2025-02-13 15:09:03,116 - ERROR - Error extracting text: (1, '')
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 47, in extract_text
+    extracted_text = pytesseract.image_to_string(processed_image, config=custom_config)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+           ^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 352, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 284, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, '')
+2025-02-13 15:09:03,117 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:09:08,451 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:08,451 - INFO - Processing Image file
+2025-02-13 15:09:08,457 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:08,457 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:08,457 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:08,457 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:08,457 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:08,477 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_z8ek9ufu_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_z8ek9ufu', '--oem', '1', '--psm', '6', 'txt']
+2025-02-13 15:09:08,724 - DEBUG - Extracted text:
+Dates MA Initials:
+INJECTION :YES_NO Exercise Therapy : YES NO
+—_Fimational Assessment Questionnaire.
+pateneneme: Was si ZBA oe: I / os er
+fate on. sale from 05 {5 beng the highest) how dif Ris to do the followhng tasks:
+Bending of Stooping: 012 34%
+Putting on shoes: $2345.
+Sleeping: 0123345
+Standing for an hour: 0133 45,
+Going up or down a flight of stairs: 0123.45
+‘Walking through a store: 0.1 2.345
+Oriving for an hour: 012348}
+Preparing a meal: 012345
+Yard work: 0123.45
+Picking up items off the floor: 01,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Be pehs
+Desertbe any funclighal changes within the lest three days (good or bed}:
+
+Bed
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+Pain:_De Numbness: Tigi: _© turing: _2- Tignes §
+**To Be Completed by MA: ’
+
+2025-02-13 15:09:08,724 - DEBUG - OCR Extracted Text:
+Dates MA Initials:
+INJECTION :YES_NO Exercise Therapy : YES NO
+—_Fimational Assessment Questionnaire.
+pateneneme: Was si ZBA oe: I / os er
+fate on. sale from 05 {5 beng the highest) how dif Ris to do the followhng tasks:
+Bending of Stooping: 012 34%
+Putting on shoes: $2345.
+Sleeping: 0123345
+Standing for an hour: 0133 45,
+Going up or down a flight of stairs: 0123.45
+‘Walking through a store: 0.1 2.345
+Oriving for an hour: 012348}
+Preparing a meal: 012345
+Yard work: 0123.45
+Picking up items off the floor: 01,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Be pehs
+Desertbe any funclighal changes within the lest three days (good or bed}:
+
+Bed
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+Pain:_De Numbness: Tigi: _© turing: _2- Tignes §
+**To Be Completed by MA: ’
+
+2025-02-13 15:09:08,725 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:09:08,727 - ERROR - Preprocessing failed
+2025-02-13 15:09:16,631 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:16,631 - INFO - Processing Image file
+2025-02-13 15:09:16,638 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:16,638 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:16,638 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:16,638 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:16,638 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:16,658 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_ox30jbd1_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_ox30jbd1', '--oem', '1', '--psm', '8', 'txt']
+2025-02-13 15:09:16,767 - DEBUG - Extracted text:
+=
+
+2025-02-13 15:09:16,767 - DEBUG - OCR Extracted Text:
+=
+
+2025-02-13 15:09:22,898 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:22,899 - INFO - Processing Image file
+2025-02-13 15:09:22,905 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:22,905 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:22,905 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:22,905 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:22,905 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:22,925 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_yv3nzo58_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_yv3nzo58', '--oem', '1', '--psm', '9', 'txt']
+2025-02-13 15:09:23,025 - DEBUG - Extracted text:
+=
+
+2025-02-13 15:09:23,025 - DEBUG - OCR Extracted Text:
+=
+
+2025-02-13 15:09:27,283 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:27,283 - INFO - Processing Image file
+2025-02-13 15:09:27,289 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:27,289 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:27,289 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:27,289 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:27,289 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:27,310 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_qcim2ihr_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_qcim2ihr', '--oem', '1', '--psm', '6', 'txt']
+2025-02-13 15:09:27,556 - DEBUG - Extracted text:
+Dates MA Initials:
+INJECTION :YES_NO Exercise Therapy : YES NO
+—_Fimational Assessment Questionnaire.
+pateneneme: Was si ZBA oe: I / os er
+fate on. sale from 05 {5 beng the highest) how dif Ris to do the followhng tasks:
+Bending of Stooping: 012 34%
+Putting on shoes: $2345.
+Sleeping: 0123345
+Standing for an hour: 0133 45,
+Going up or down a flight of stairs: 0123.45
+‘Walking through a store: 0.1 2.345
+Oriving for an hour: 012348}
+Preparing a meal: 012345
+Yard work: 0123.45
+Picking up items off the floor: 01,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Be pehs
+Desertbe any funclighal changes within the lest three days (good or bed}:
+
+Bed
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+Pain:_De Numbness: Tigi: _© turing: _2- Tignes §
+**To Be Completed by MA: ’
+
+2025-02-13 15:09:27,557 - DEBUG - OCR Extracted Text:
+Dates MA Initials:
+INJECTION :YES_NO Exercise Therapy : YES NO
+—_Fimational Assessment Questionnaire.
+pateneneme: Was si ZBA oe: I / os er
+fate on. sale from 05 {5 beng the highest) how dif Ris to do the followhng tasks:
+Bending of Stooping: 012 34%
+Putting on shoes: $2345.
+Sleeping: 0123345
+Standing for an hour: 0133 45,
+Going up or down a flight of stairs: 0123.45
+‘Walking through a store: 0.1 2.345
+Oriving for an hour: 012348}
+Preparing a meal: 012345
+Yard work: 0123.45
+Picking up items off the floor: 01,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Be pehs
+Desertbe any funclighal changes within the lest three days (good or bed}:
+
+Bed
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+Pain:_De Numbness: Tigi: _© turing: _2- Tignes §
+**To Be Completed by MA: ’
+
+2025-02-13 15:09:27,558 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:09:27,559 - ERROR - Preprocessing failed
+2025-02-13 15:09:32,802 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:32,802 - INFO - Processing Image file
+2025-02-13 15:09:32,808 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:32,808 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:32,808 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:32,808 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:32,808 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:32,829 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_n5sx540y_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_n5sx540y', '--oem', '2', '--psm', '6', 'txt']
+2025-02-13 15:09:32,859 - ERROR - Error extracting text: (1, "Error: Tesseract (legacy) engine requested, but components are not present in C:\\Program Files\\Tesseract-OCR/tessdata/eng.traineddata!! Failed loading language 'eng' Tesseract couldn't load any languages! Could not initialize tesseract.")
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 47, in extract_text
+    extracted_text = pytesseract.image_to_string(processed_image, config=custom_config)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+           ^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 352, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 284, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, "Error: Tesseract (legacy) engine requested, but components are not present in C:\\Program Files\\Tesseract-OCR/tessdata/eng.traineddata!! Failed loading language 'eng' Tesseract couldn't load any languages! Could not initialize tesseract.")
+2025-02-13 15:09:32,860 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:09:39,491 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:39,492 - INFO - Processing Image file
+2025-02-13 15:09:39,498 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:39,498 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:39,498 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:39,498 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:39,498 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:39,519 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_gp6a73d3_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_gp6a73d3', '--oem', '1.2', '--psm', '6', 'txt']
+2025-02-13 15:09:39,537 - ERROR - Error extracting text: (1, '')
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 47, in extract_text
+    extracted_text = pytesseract.image_to_string(processed_image, config=custom_config)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+           ^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 352, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 284, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, '')
+2025-02-13 15:09:39,538 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:09:45,561 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:45,562 - INFO - Processing Image file
+2025-02-13 15:09:45,568 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:45,568 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:45,568 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:45,568 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:45,569 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:45,589 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_xsznd9nj_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_xsznd9nj', '--oem', '6', '--psm', '6', 'txt']
+2025-02-13 15:09:45,607 - ERROR - Error extracting text: (1, '')
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 47, in extract_text
+    extracted_text = pytesseract.image_to_string(processed_image, config=custom_config)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+           ^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 352, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\pytesseract\pytesseract.py", line 284, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, '')
+2025-02-13 15:09:45,608 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:09:56,964 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:56,964 - INFO - Processing Image file
+2025-02-13 15:09:56,970 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:56,970 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:56,970 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:56,970 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:56,970 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:56,990 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_nmryrau7_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_nmryrau7', '--oem', '1', '--psm', '9', 'txt']
+2025-02-13 15:09:57,091 - DEBUG - Extracted text:
+=
+
+2025-02-13 15:09:57,091 - DEBUG - OCR Extracted Text:
+=
+
+2025-02-13 15:09:58,323 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:09:58,323 - INFO - Processing Image file
+2025-02-13 15:09:58,329 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:09:58,329 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:09:58,329 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:09:58,329 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:09:58,329 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:09:58,350 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_gpttos4m_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_gpttos4m', '--oem', '1', '--psm', '9', 'txt']
+2025-02-13 15:09:58,451 - DEBUG - Extracted text:
+=
+
+2025-02-13 15:09:58,451 - DEBUG - OCR Extracted Text:
+=
+
+2025-02-13 15:10:04,920 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:10:04,920 - INFO - Processing Image file
+2025-02-13 15:10:04,925 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:10:04,926 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:10:04,926 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:10:04,926 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:10:04,926 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:10:04,946 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_h08h6tww_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_h08h6tww', '--oem', '1', '--psm', '7', 'txt']
+2025-02-13 15:10:05,052 - DEBUG - Extracted text:
+
+2025-02-13 15:10:05,052 - DEBUG - OCR Extracted Text:
+
+2025-02-13 15:10:31,889 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:10:31,889 - INFO - Processing Image file
+2025-02-13 15:10:31,895 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:10:31,895 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:10:31,895 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:10:31,895 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:10:31,895 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:10:31,916 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_p5y1tz5f_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_p5y1tz5f', '--oem', '1', '--psm', '6', 'txt']
+2025-02-13 15:10:32,170 - DEBUG - Extracted text:
+Dates MA Initials:
+INJECTION :YES_NO Exercise Therapy : YES NO
+—_Fimational Assessment Questionnaire.
+pateneneme: Was si ZBA oe: I / os er
+fate on. sale from 05 {5 beng the highest) how dif Ris to do the followhng tasks:
+Bending of Stooping: 012 34%
+Putting on shoes: $2345.
+Sleeping: 0123345
+Standing for an hour: 0133 45,
+Going up or down a flight of stairs: 0123.45
+‘Walking through a store: 0.1 2.345
+Oriving for an hour: 012348}
+Preparing a meal: 012345
+Yard work: 0123.45
+Picking up items off the floor: 01,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Be pehs
+Desertbe any funclighal changes within the lest three days (good or bed}:
+
+Bed
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+Pain:_De Numbness: Tigi: _© turing: _2- Tignes §
+**To Be Completed by MA: ’
+
+2025-02-13 15:10:32,171 - DEBUG - OCR Extracted Text:
+Dates MA Initials:
+INJECTION :YES_NO Exercise Therapy : YES NO
+—_Fimational Assessment Questionnaire.
+pateneneme: Was si ZBA oe: I / os er
+fate on. sale from 05 {5 beng the highest) how dif Ris to do the followhng tasks:
+Bending of Stooping: 012 34%
+Putting on shoes: $2345.
+Sleeping: 0123345
+Standing for an hour: 0133 45,
+Going up or down a flight of stairs: 0123.45
+‘Walking through a store: 0.1 2.345
+Oriving for an hour: 012348}
+Preparing a meal: 012345
+Yard work: 0123.45
+Picking up items off the floor: 01,2345
+Patient Changes since last treatment:
+Patient changes since the start of treatment:
+
+Be pehs
+Desertbe any funclighal changes within the lest three days (good or bed}:
+
+Bed
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+Pain:_De Numbness: Tigi: _© turing: _2- Tignes §
+**To Be Completed by MA: ’
+
+2025-02-13 15:10:32,173 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:10:32,174 - ERROR - Preprocessing failed
+2025-02-13 15:10:35,611 - INFO - Processing file: uploads/Screenshot 2025-02-12 180455.png
+2025-02-13 15:10:35,611 - INFO - Processing Image file
+2025-02-13 15:10:35,618 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-13 15:10:35,618 - DEBUG - STREAM b'sRGB' 41 1
+2025-02-13 15:10:35,618 - DEBUG - STREAM b'gAMA' 54 4
+2025-02-13 15:10:35,618 - DEBUG - STREAM b'pHYs' 70 9
+2025-02-13 15:10:35,618 - DEBUG - STREAM b'IDAT' 91 65445
+2025-02-13 15:10:35,639 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_jb8qmvmo_input.PNG', 'C:\\Users\\gemin\\AppData\\Local\\Temp\\tess_jb8qmvmo', '--oem', '1', '--psm', '11', 'txt']
+2025-02-13 15:10:35,899 - DEBUG - Extracted text:
+Date.
+
+MAA Initials :
+
+INJECTION : YES NO
+
+Exercise Therapy : YES NO
+
+Patient Name ;_VV se se PBA pos:_4 // &§
+
+[st
+
+Rate on a scale from 0-5 {5 being the highest) how dificult Rts to do the following tasks:
+
+Bending of Stooping: 012 34%
+
+Putting on shoes: 0£23 45
+
+Sleeping: 0123345
+
+Standing for an hour:
+
+13345
+
+Going up or down a flight of stairs: 0123.45,
+
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 01,2345
+
+Patient Changes since last treatment:
+
+Net drodd
+
+Patient changes since the start of treatment:
+
+He
+
+Describe anryfunchighal changes within the last three days (good or bad):
+
+Bed
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+
+Pain: Jee Numbness: ¢ Testing: __& burning: 2 nymess 4
+
+!
+
+“10
+
+let
+
+MA:
+
+Blood Pressare:.
+
+Ril
+
+Weigte _§
+
+Beigte 2
+
+2025-02-13 15:10:35,899 - DEBUG - OCR Extracted Text:
+Date.
+
+MAA Initials :
+
+INJECTION : YES NO
+
+Exercise Therapy : YES NO
+
+Patient Name ;_VV se se PBA pos:_4 // &§
+
+[st
+
+Rate on a scale from 0-5 {5 being the highest) how dificult Rts to do the following tasks:
+
+Bending of Stooping: 012 34%
+
+Putting on shoes: 0£23 45
+
+Sleeping: 0123345
+
+Standing for an hour:
+
+13345
+
+Going up or down a flight of stairs: 0123.45,
+
+‘Walking through a store: 0.1 2.345
+
+Driving for an hour: 01234;
+
+Preparing a meal: 012345
+
+Yard work: 0123.45
+
+Picking up items off the floor: 01,2345
+
+Patient Changes since last treatment:
+
+Net drodd
+
+Patient changes since the start of treatment:
+
+He
+
+Describe anryfunchighal changes within the last three days (good or bad):
+
+Bed
+
+Rate pain symptoms on a scale of 0-10 (10 being the highest}:
+
+Pain: Jee Numbness: ¢ Testing: __& burning: 2 nymess 4
+
+!
+
+“10
+
+let
+
+MA:
+
+Blood Pressare:.
+
+Ril
+
+Weigte _§
+
+Beigte 2
+
+2025-02-13 15:10:35,900 - ERROR - Error preprocessing image: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+Traceback (most recent call last):
+  File "c:\Users\gemin\OCR-Based Data Extraction\scripts\ocr_extraction.py", line 23, in preprocess_image
+    image = Image.open(image)
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gemin\AppData\Local\Programs\Python\Python312\Lib\site-packages\PIL\Image.py", line 3431, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gemin\\OCR-Based Data Extraction\\ough a store: 0.1 2.345'
+2025-02-13 15:10:35,901 - ERROR - Preprocessing failed
