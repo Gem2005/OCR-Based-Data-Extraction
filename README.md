@@ -93,13 +93,11 @@ sudo apt install tesseract-ocr
 Create a `.env` file in the project root:
 
 ```ini
-SUPABASE_URL=https://your-supabase-url.supabase.co
-SUPABASE_KEY=your-secret-api-key
-DB_NAME=your_database
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_HOST=your_host
-DB_PORT=5432
+dbname=your_database
+user=your_username
+password=your_password
+host=your_host
+port=your_port
 ```
 
 #### **➤ Run Database Setup**
