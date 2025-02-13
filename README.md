@@ -116,6 +116,11 @@ python main.py
 ```
 Visit `http://127.0.0.1:5000/` in your browser, upload a file, and process it.
 
+#### **Access the Web Interface**
+```bash
+http://127.0.0.1:5000/
+```
+
 ### **2️⃣ Extract Data from PDF or Image Manually**
 ```bash
 python scripts/insert_data.py data/sample_form.pdf
